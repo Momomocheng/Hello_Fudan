@@ -12,6 +12,7 @@ import io
 import numpy
 from PIL import Image
 from PIL import ImageEnhance
+import random
 
 from requests import session, post, adapters
 adapters.DEFAULT_RETRIES = 5
@@ -269,6 +270,12 @@ def get_account():
 
 
 if __name__ == '__main__':
+    # 模拟随机时间
+    t = random.randint(1, 1000) # 模拟用户点击，随机时间操作
+    print("睡眠开始")
+    time.sleep(t)
+    print("睡眠结束！")
+    
     uid, psw = get_account()
     # print(uid, psw)
     zlapp_login = 'https://uis.fudan.edu.cn/authserver/login?' \
